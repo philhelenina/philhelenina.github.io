@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Minimal Academic Portfolio
+   Minimal Academic Portfolio - John Hewitt Style
    ========================================================================== */
 
 /* Reset & Base Styles */
@@ -36,7 +36,7 @@ h2 {
     font-weight: normal;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    color: #007A7A; /* 액센트 컬러 적용 */
+    color: #444;
 }
 
 h3 {
@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-    color: #005A5A; /* 호버 시 더 어두운 틸 */
+    color: #005A5A; /* 호버 시 더 어둡게 */
 }
 
 a:visited {
