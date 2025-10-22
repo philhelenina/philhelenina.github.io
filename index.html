@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic portfolio of [Your Name] - Linguistics, NLP, and AI Healthcare researcher">
+    <title>[Your Name] - Academic Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics (Optional - replace GA_MEASUREMENT_ID) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.pdf" class="no-icon">CV</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Optional: Uncomment to add profile image -->
+            <!-- <img src="images/profile.jpg" alt="Profile Photo" class="profile-img"> -->
+
+            <h1 class="name">Your Name</h1>
+            <p class="affiliation">
+                PhD Student<br>
+                Department of Linguistics<br>
+                University Name
+            </p>
+
+            <div class="bio">
+                <p>
+                    I am a PhD student working at the intersection of linguistics, natural language processing,
+                    and AI in healthcare. My research focuses on [brief description of your main research area].
+                </p>
+                <p>
+                    Prior to starting my PhD, I [brief background - e.g., worked at X company,
+                    completed my Master's at Y university, etc.].
+                </p>
+            </div>
+
+            <p class="interests">
+                <strong>Research Interests:</strong> Computational Linguistics, Natural Language Processing,
+                Syntactic Theory, AI for Healthcare, Low-Resource Languages
+            </p>
+        </header>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:your.email@university.edu" class="email-copy" onclick="copyEmail(event, 'your.email@university.edu')">Email</a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+                <a href="https://github.com/philhelenina">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                <a href="https://twitter.com/yourhandle">Twitter</a>
+            </div>
+        </section>
+
+        <!-- Recent News (Optional) -->
+        <section>
+            <h2>News</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.75rem;">
+                    <span style="color: #666; font-size: 0.9rem;">[Month Year]</span>
+                    — Paper accepted to [Conference Name]!
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    <span style="color: #666; font-size: 0.9rem;">[Month Year]</span>
+                    — Started position as [Role] at [Institution]
+                </li>
+                <li style="margin-bottom: 0.75rem;">
+                    <span style="color: #666; font-size: 0.9rem;">[Month Year]</span>
+                    — Presented at [Workshop/Conference Name]
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Your Name. Last updated: October 2024.</p>
+        </footer>
+    </div>
+
+    <!-- Email Copy Functionality -->
+    <script>
+        function copyEmail(event, email) {
+            event.preventDefault();
+            navigator.clipboard.writeText(email).then(function() {
+                // Visual feedback
+                const link = event.target;
+                const originalText = link.textContent;
+                link.textContent = 'Copied!';
+                link.style.color = '#0066cc';
+
+                setTimeout(function() {
+                    link.textContent = originalText;
+                    link.style.color = '';
+                }, 1500);
+            }).catch(function(err) {
+                // Fallback: open email client
+                window.location.href = 'mailto:' + email;
+            });
+        }
+    </script>
+</body>
+</html>
