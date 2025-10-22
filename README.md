@@ -1,6 +1,6 @@
 # Academic Portfolio Website
 
-A minimal, typography-focused academic portfolio website inspired by [John Hewitt's website](https://nlp.stanford.edu/~johnhew/).
+A minimal, typography-focused academic portfolio website.
 
 ## Features
 
