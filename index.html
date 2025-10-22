@@ -4,42 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Academic portfolio of Cheonkam Jeong - Emotional AI, LLMs, and Human-Robot Interaction researcher">
-    <title>Cheonkam Jeong - Academic Portfolio</title>
+    <title>Cheonkam Jeong</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google Analytics (Optional - replace GA_MEASUREMENT_ID) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
 </head>
 <body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="cv.pdf" class="no-icon">CV</a></li>
-            </ul>
-        </nav>
-
-        <!-- Header Section -->
-        <header class="header">
-            <!-- Optional: Uncomment to add profile image -->
-            <!-- <img src="images/profile.jpg" alt="Profile Photo" class="profile-img"> -->
-
+    <!-- Header Section with Profile Photo -->
+    <header class="header">
+        <div class="header-content">
             <h1 class="name">Cheonkam Jeong</h1>
+
             <p class="affiliation">
-                Postdoctoral Scholar - AI/ML Lead<br>
-                Sue & Bill Gross School of Nursing, University of California, Irvine<br>
-                Visiting Scholar, Department of Computer Science, Purdue University
+                Postdoctoral Scholar - AI/ML Lead, Sue & Bill Gross School of Nursing, University of California, Irvine.
+                <br><br>
+                Visiting Scholar, Department of Computer Science, Purdue University.
             </p>
+
+            <span class="email">cheonkaj [at] hs.uci.edu</span>
 
             <div class="bio">
                 <p>
@@ -58,87 +38,78 @@
                 </p>
             </div>
 
-            <p class="interests">
-                <strong>Research Interests:</strong> Emotional AI, Large Language Models, Human-Robot Interaction,
-                LLM Alignment & Safety, Agentic AI, Neuro-Symbolic Reasoning, Prosody & Speech Processing,
-                Multimodal Dataset Creation, AI for Healthcare
+            <p>
+                Feel free to look me up on
+                <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> or
+                <a href="https://www.linkedin.com/in/cheonkamjeong/">LinkedIn</a>, or take my
+                <a href="cv.pdf">CV</a>.
             </p>
-        </header>
+        </div>
 
-        <!-- Contact Section -->
-        <section>
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:cheonkaj@hs.uci.edu" class="email-copy" onclick="copyEmail(event, 'cheonkaj@hs.uci.edu')">Email</a>
-                <a href="https://www.linkedin.com/in/cheonkamjeong/">LinkedIn</a>
-                <a href="https://github.com/philhelenina">GitHub</a>
-            </div>
-        </section>
+        <div class="profile-photo">
+            <!-- Replace with your actual profile photo -->
+            <img src="images/profile.jpg" alt="Cheonkam Jeong" class="profile-img" onerror="this.style.display='none'">
+        </div>
+    </header>
 
-        <!-- Technical Skills -->
-        <section>
-            <h2>Technical Skills</h2>
-            <p style="line-height: 1.8; color: #333;">
-                <strong>Programming:</strong> Python, R, Perl, Prolog<br>
-                <strong>Speech & Audio:</strong> Praat, Audacity<br>
-                <strong>Data & Analytics:</strong> PostgreSQL, SPSS, Tableau<br>
-                <strong>Research Platforms:</strong> Amazon Mechanical Turk, FindingFive
-            </p>
-        </section>
+    <!-- Research Interests -->
+    <section>
+        <p class="interests">
+            <strong>Research Interests:</strong> Emotional AI, Large Language Models, Human-Robot Interaction,
+            LLM Alignment & Safety, Agentic AI, Neuro-Symbolic Reasoning, Prosody & Speech Processing,
+            Multimodal Dataset Creation, AI for Healthcare
+        </p>
+    </section>
 
-        <!-- Recent News -->
-        <section>
-            <h2>News</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.75rem;">
-                    <span style="color: #666; font-size: 0.9rem;">May 2025</span>
-                    — Delivered invited talk on "Introduction to NLP and its Applications in Healthcare" at UC Irvine School of Nursing
-                </li>
-                <li style="margin-bottom: 0.75rem;">
-                    <span style="color: #666; font-size: 0.9rem;">2025</span>
-                    — Paper on multimodal communication annotations accepted to NAACL 2025
-                </li>
-                <li style="margin-bottom: 0.75rem;">
-                    <span style="color: #666; font-size: 0.9rem;">2025</span>
-                    — Awarded Saturn Cloud NVIDIA Academic Grants for research at Purdue University
-                </li>
-                <li style="margin-bottom: 0.75rem;">
-                    <span style="color: #666; font-size: 0.9rem;">2024</span>
-                    — Started position as Postdoctoral Scholar (AI/ML Lead) at UC Irvine School of Nursing
-                </li>
-                <li style="margin-bottom: 0.75rem;">
-                    <span style="color: #666; font-size: 0.9rem;">2024</span>
-                    — Successfully defended PhD dissertation on hyperarticulation in Korean stops
-                </li>
-            </ul>
-        </section>
+    <!-- Technical Skills -->
+    <section>
+        <h2>Technical Skills</h2>
+        <p class="skills-list">
+            <strong>Programming:</strong> Python, R, Perl, Prolog<br>
+            <strong>Speech & Audio:</strong> Praat, Audacity<br>
+            <strong>Data & Analytics:</strong> PostgreSQL, SPSS, Tableau<br>
+            <strong>Research Platforms:</strong> Amazon Mechanical Turk, FindingFive
+        </p>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Cheonkam Jeong. Last updated: October 2025.</p>
-        </footer>
-    </div>
+    <!-- Recent News -->
+    <section>
+        <h2>News</h2>
+        <ul class="news-list">
+            <li>
+                <span class="news-date">May 2025</span>
+                — Delivered invited talk on "Introduction to NLP and its Applications in Healthcare" at UC Irvine School of Nursing
+            </li>
+            <li>
+                <span class="news-date">2025</span>
+                — Paper on multimodal communication annotations accepted to NAACL 2025
+            </li>
+            <li>
+                <span class="news-date">2025</span>
+                — Awarded Saturn Cloud NVIDIA Academic Grants for research at Purdue University
+            </li>
+            <li>
+                <span class="news-date">2024</span>
+                — Started position as Postdoctoral Scholar (AI/ML Lead) at UC Irvine School of Nursing
+            </li>
+            <li>
+                <span class="news-date">2024</span>
+                — Successfully defended PhD dissertation on hyperarticulation in Korean stops
+            </li>
+        </ul>
+    </section>
 
-    <!-- Email Copy Functionality -->
-    <script>
-        function copyEmail(event, email) {
-            event.preventDefault();
-            navigator.clipboard.writeText(email).then(function() {
-                // Visual feedback
-                const link = event.target;
-                const originalText = link.textContent;
-                link.textContent = 'Copied!';
-                link.style.color = '#0066cc';
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+    </nav>
 
-                setTimeout(function() {
-                    link.textContent = originalText;
-                    link.style.color = '';
-                }, 1500);
-            }).catch(function(err) {
-                // Fallback: open email client
-                window.location.href = 'mailto:' + email;
-            });
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cheonkam Jeong. Last updated: October 2025.</p>
+    </footer>
 </body>
 </html>
