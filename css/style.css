@@ -181,7 +181,7 @@ a[href^="https://"]:hover::after {
 
 /* Publications */
 .publication {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     padding: 1rem 0;
     transition: background-color 0.2s ease;
 }
