@@ -21,12 +21,22 @@ def extract_metadata_from_html(filepath):
     date_match = re.search(r'<p class="post-date">(.*?)</p>', content)
     date_str = date_match.group(1) if date_match else ''
 
-    # Extract categories
+    # Extract categories from metadata
     categories_match = re.search(r'<strong>Categories:</strong>\s*(.*?)</p>', content, re.DOTALL)
     categories = []
     if categories_match:
         cat_text = categories_match.group(1)
         categories = [c.strip() for c in cat_text.split(',')]
+
+    # Also extract categories from title (e.g., [Paper Review - NLP])
+    if title:
+        # Match patterns like [Paper Review - X] or [Book Summary - X]
+        title_cats = re.findall(r'\[(Paper Review|Book Summary|Book Review|Algorithm|Speech Technology|NLP|Psycholinguistics)[^\]]*\]', title, re.IGNORECASE)
+        for cat in title_cats:
+            # Extract the main category
+            main_cat = cat.split('-')[0].strip() if '-' in cat else cat
+            if main_cat not in categories:
+                categories.append(main_cat)
 
     # Extract first 200 chars of content for preview
     content_match = re.search(r'<h1>.*?</p>\s*(.*?)\s*<p class="post-meta">', content, re.DOTALL)
