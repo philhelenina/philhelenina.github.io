@@ -70,7 +70,7 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .header-content {
@@ -95,6 +95,7 @@ a:visited {
 .profile-photo {
     width: 240px;
     flex-shrink: 0;
+    margin-top: 3.5rem;
 }
 
 .profile-img {
