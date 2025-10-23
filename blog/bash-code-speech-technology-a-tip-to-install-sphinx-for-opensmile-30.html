@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bash Code - Speech Technology] A Tip to Install Sphinx for OpenSmile 3.0 - Cheonkam Jeong</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <h1>[Bash Code - Speech Technology] A Tip to Install Sphinx for OpenSmile 3.0</h1>
+        <p class="post-date">December 05, 2022</p>
+
+        <p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica; font-size: medium;"><b>Environment</b></span></p><p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica;">My OS environment: macOS Mojave Version 10.14.6</span></p><p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica;">I am not using Conda, and trying to avoid using Homebrew.&nbsp;</span></p><p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica; font-size: medium;"><b>Procedure</b></span></p><p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica;">If OpenSmile 3.0 is successfully installed, you will see “sphinx” made under the “doc” folder. Before installing what is listed in “requirements.txt,” you might need to install “sphinx.” I first tried "sphinx_build" command, but it did not work. I thought there was something wrong with Sphinx configuration. So, after activating a virtual environment, I installed and configured “sphinx.” Below is a description of the whole processes that I took:</span></p><ol style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><li><span style="font-family: helvetica;">Activate your virtual environment</span></li><li><span style="font-family: helvetica;">Install “sphinx” using pip install sphinx</span></li><li><span style="font-family: helvetica;">Check whether it works with the following command: sphinx-build --help</span></li><li><span style="font-family: helvetica;">Go to the “sphinx” folder</span></li><li><span style="font-family: helvetica;">Install what is list in “requirements.txt”: pip install -r requirements.txt</span></li></ol><p style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: helvetica;">IMPORTANT: You would need to change “sphinxcontrib-bibtext” to “sphinxcontrib.bibtext” before running this code. I had an error about this and then realized that that was because of this difference.&nbsp;</span></p><ol start="6" style="caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><li><span style="font-family: helvetica;">Neither make clean nor make html did work for me; only make clean worked. So, I used the followings:</span><ol><li><span style="font-family: helvetica;">sphinx-build -b html -d ./_build/doctrees . ./_build/html/</span></li><li><span style="font-family: helvetica;">sphinx-build -b latex -d ./_build/doctrees . ./_build/latex/</span></li></ol></li></ol>
+
+        <p class="post-meta">
+            <strong>Categories:</strong> Speech Technology, Bash Code
+        </p>
+
+        <p class="post-meta">
+            <small>Original post: <a href="https://cheonkamjeong.blogspot.com/2022/12/bash-tip-to-install-sphinx-for.html" target="_blank">https://cheonkamjeong.blogspot.com/2022/12/bash-tip-to-install-sphinx-for.html</a></small>
+        </p>
+    </article>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cheonkam Jeong. Last updated: October 2025.</p>
+    </footer>
+</body>
+</html>

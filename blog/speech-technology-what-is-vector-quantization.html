@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Speech Technology] What is Vector Quantization? - Cheonkam Jeong</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <h1>[Speech Technology] What is Vector Quantization?</h1>
+        <p class="post-date">January 04, 2023</p>
+
+        <div style="text-align: left;"><span style="background-color: white; font-family: helvetica;"><span style="white-space: pre;">The size of training data should be large enough for reliable values to be driven for all </span></span></div><div style="text-align: left;"><span style="background-color: white; font-family: helvetica;"><span style="white-space: pre;">the parameters. However, the larger the number of feature vectors is, the more possible </span></span></div><div style="text-align: left;"><span style="background-color: white; font-family: helvetica;"><span style="white-space: pre;">values for each feature are. Not only is this memory-inefficient, but also this is problematic </span></span></div><div style="text-align: left;"><span style="background-color: white; font-family: helvetica;"><span style="white-space: pre;">because many feature vectors will not occur at all in the training data. One solution for these </span></span></div><div style="text-align: left;"><span style="background-color: white; font-family: helvetica;"><span style="white-space: pre;">problems is using Vector Quantization (VQ).</span></span></div><div style="line-height: 18px; text-align: left; white-space: pre;"><div><span style="background-color: white; font-family: helvetica;"><br /></span></div><div><span style="background-color: white; font-family: helvetica;">VQ is a data compression technique. It does not deal with all the feature vectors, but only </span></div><div><span style="background-color: white; font-family: helvetica;">some centroids of them, which can be obtained through Euclidean distance. </span></div><div><span style="background-color: white; font-family: helvetica;">As a simple example, if we want to represent 0 to 7 in one dimension. 3 bits (by 23 = 8) </span></div><div><span style="background-color: white; font-family: helvetica;">are needed to do so. However, if we apply VQ to this, only 2 bits (by 22 = 4) are needed </span></div><div><span style="background-color: white; font-family: helvetica;">(4 centroids in 4 clusters: 1 in 0 to 1.99; 2 in 2 to 3.99; 5 in 4 to 5.99; and 7 in 6 to 7.99). </span></div><div><span style="background-color: white; font-family: helvetica;">So, if “41371512” is the target, 24 bits (by 3 * 8) are needed without VQ while 16 bits (by 2 * 8) </span></div><div><span style="background-color: white; font-family: helvetica;">with VQ. However, they are represented in different ways: VQ version is </span></div><div><span style="background-color: white; font-family: helvetica;">with centroids “51271512” while non-VQ version is as it is. VQ also can be applied </span></div><div><span style="background-color: white; font-family: helvetica;">to more than one dimensions. For example, if there are 16 dots in a two-dimensional space </span></div><div><span style="background-color: white; font-family: helvetica;">(plane), 4 bits (by 24 =16) per data value are needed, but if 16 dots are represented </span></div><div><span style="background-color: white; font-family: helvetica;">with 4 centroids, only 2 bits (by 22 = 4) per data value are needed.</span></div><div><span style="background-color: white; font-family: helvetica;"><br /></span></div><div><span style="background-color: white; font-family: helvetica;">To be more specific on how this works, let’s take another example. </span></div><div><span style="background-color: white; font-family: helvetica;">If there are 4,096 dots in a plane, 12 bits (by 212 = 4,096) per data value are needed, </span></div><div><span style="background-color: white; font-family: helvetica;">but if these are represented with 16 centroids through such clustering techniques as k-means, </span></div><div><span style="background-color: white; font-family: helvetica;">only 4 bits (24 = 16) per data value are needed. All these centroid values (e.g., (2, 5)) are to be </span></div><div><span style="background-color: white; font-family: helvetica;">saved as vector values and will be assigned vector numbers </span></div><div><span style="background-color: white; font-family: helvetica;">(i.e., 0000, 0001, 0010, … 1111 in this case). These values are further to be saved </span></div><div><span style="background-color: white; font-family: helvetica;">in the codebook, with vector values as codebook values and vector numbers as codebook entries. </span></div><div><span style="background-color: white; font-family: helvetica;">If a codebook is established with a training data set as such, a sequence of acoustic data </span></div><div><span style="background-color: white; font-family: helvetica;">in the form of vectors can be represented with codebook entries. For instance, if (2, 5) is saved </span></div><div><span style="background-color: white; font-family: helvetica;">as entry 3 in the codebook and one of the vectors in the new acoustic data is (2, 4.9), it is going </span></div><div><span style="background-color: white; font-family: helvetica;">to be represented as the entry number of 3.</span></div><div><span style="background-color: white; font-family: helvetica;"><br /></span></div><div><span style="background-color: white; font-family: helvetica;">In short, VQ is a data compression method, by which only some representative vectors of clusters </span></div><div><span style="background-color: white; font-family: helvetica;">are dealt with. As the number of feature vectors is increasing, the effect of VQ is also increasing.</span></div></div>
+
+        <p class="post-meta">
+            <strong>Categories:</strong> Speech Technology
+        </p>
+
+        <p class="post-meta">
+            <small>Original post: <a href="https://cheonkamjeong.blogspot.com/2023/01/speech-technology-what-is-vector.html" target="_blank">https://cheonkamjeong.blogspot.com/2023/01/speech-technology-what-is-vector.html</a></small>
+        </p>
+    </article>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cheonkam Jeong. Last updated: October 2025.</p>
+    </footer>
+</body>
+</html>

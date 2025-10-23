@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Speech Technology, NLP] Differences Between Hidden Markov Models, Perceptron, and Full Neural Networks - Cheonkam Jeong</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <h1>[Speech Technology, NLP] Differences Between Hidden Markov Models, Perceptron, and Full Neural Networks</h1>
+        <p class="post-date">January 04, 2023</p>
+
+        <p><span style="font-family: helvetica;">Both HMMs and neural nets, including perceptron, have in common that they basically identify whether an item is a member of the class. However, they are essentially different from each other; HMMs are generative while neural nets are discriminative. Basically, HMMs are used to infer some output variable b given the values of an input variable or pattern a in terms of Bayes theorem, which makes it possible for HMMs to generate a language, not only judge the membership of an item. On the other hand, neural nets are used to compute the probability of an output b given an input a, thus being less model-dependent. In a nutshell, what HMMs represent is p(b|a) while neural nets represent p(a, b).</span></p><p><span style="font-family: helvetica;">To be more specific on each model, HMMs are based on Markov chain property, which is the probability of each subsequent state depending solely on what the previous state was, viz. p(qi = a | qi...qi-1) = P(qi = a | qi-1). It is specified with a set of states, transitional probabilities, a sequence of observations, emission probabilities, and initial probability distribution. There are three tasks related to HMMs: determining the likelihood, finding the best hidden state sequence, and training. The first task is to determine the likelihood P(O|<span style="caret-color: rgb(32, 33, 34); color: #202122; text-size-adjust: auto;"><span title="Greek-language text"><span lang="el">λ), given an HMM&nbsp;</span></span></span><span style="caret-color: rgb(32, 33, 34); color: #202122; text-size-adjust: auto;"><span title="Greek-language text"><span lang="el">λ = (A, B) and an observation sequence O. Since the state sequence is hidden, the likelihood is calculated using the forward probability with the one-to-one mapping assumption and the aforementioned Markov assumption.</span></span></span></span></p><p><span style="caret-color: rgb(32, 33, 34); color: #202122; text-size-adjust: auto;"><span title="Greek-language text"><span lang="el"><span style="font-family: helvetica;">For instance, imagine that we want to determine the probability of a mask-buying observation sequence like 3 2 3 depending on weather. The computation of the forward probability for the mask-buying observation 3 2 3 from one possible hidden state sequence <i>hot cold hot</i> is P(3 2 3|hot cold hot) = P(3|hot) * P(2|cold) * P(3|hot), but since this is hidden, all possible weather sequences need to be considered. However, computing the total observation likelihood by a separate observation for each hidden state sequence and summation of them is inefficient; thus, the forward algorithm is adopted and the probability of it in the current time step is calculated by summing the previous forward path probability multiplied by transitional probability and the state observation likelihood from 1 to the number of hidden states. Another task is to discover the best hidden state sequence using the Viterbi algorithm, whose mechanism is to find the highest probability of the multiplication of previous Viterbi path probability, transition probability, and state observation likelihood. The other task is HMM training using the forward-backward, or Baum-Welch algorithm, by which transitional and emission probabilities are trained.</span></span></span></span></p><p><span style="caret-color: rgb(32, 33, 34); color: #202122; text-size-adjust: auto;"><span title="Greek-language text"><span lang="el"><span style="font-family: helvetica;">While the states of the HMMs are gone through one after another, a vector of input values are provided in a perceptron, one type of neural nets, by which output values are calculated. To be specific, a perceptron consists of input nodes, bias nodes, and output node, and an output node values is the sum of the input values multiplied by the weights of their connect to that output node and the bias values multiplied by their connection to it. For example, suppose that there is a vector of the input values, x &lt;3, 7&gt;, and the output value, b = 11, that the weight of the input value is w &lt;2, -3&gt;, that the bias value is 5, and that the activation function is 2x. The perceptron based on these values results in -8 by 2 * (11+ 3 * 2 + 7 * (-3)). However, a perceptron cannot deal with non-linear relationship, like logistic regression. In other words, the target data for it should be linearly separable. One solution is to use full neural nets. Full neural nets post more than one hidden layer between input and output nodes, and nodes in it have continuous non-linear activation functions, like sigmoid function. At that point, non-linearity can be accommodated.</span></span></span></span></p><p><span style="caret-color: rgb(32, 33, 34); color: #202122; font-family: helvetica;">In addition to the intrinsic difference between HMMs and neural nets, the learning process is also different from each other. Since states cannot be observed in HMMs and can be accessed by only state functions or probabilities, transitional and emission probabilities are learned using the forward-backward algorithm. It basically assigns probabilities in the context of indeterminacy by calculating the counts for sub-paths in one way and then changing the counts in the other way. In contrast to HMMs, in the case of neural nets, in particular the simplest neural net perceptron, weights of the input and the bias nodes are directly adjusted as outputs can be observed during learning.</span></p><br /><br /><p></p>
+
+        <p class="post-meta">
+            <strong>Categories:</strong> Speech Technology, NLP
+        </p>
+
+        <p class="post-meta">
+            <small>Original post: <a href="https://cheonkamjeong.blogspot.com/2023/01/speech-technology-nlp-differences.html" target="_blank">https://cheonkamjeong.blogspot.com/2023/01/speech-technology-nlp-differences.html</a></small>
+        </p>
+    </article>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../publications.html">Publications</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cheonkam Jeong. Last updated: October 2025.</p>
+    </footer>
+</body>
+</html>
