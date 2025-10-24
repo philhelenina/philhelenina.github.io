@@ -80,8 +80,16 @@ a:visited {
 .name {
     font-size: 2.5rem;
     font-weight: normal;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: #444;
+}
+
+.pronunciation {
+    font-family: "Charis SIL", "Doulos SIL", "Gentium Plus", Georgia, serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-style: normal;
 }
 
 .affiliation {
@@ -295,6 +303,10 @@ footer {
 
     h1, .name {
         font-size: 2rem;
+    }
+
+    .pronunciation {
+        font-size: 1rem;
     }
 
     .affiliation {
