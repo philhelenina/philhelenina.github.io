@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Speech Technology] What is Glow Text-To-Speech (TTS) model? (A brief summary) - Cheonkam Jeong</title>
+    <title>What is Glow Text-To-Speech (TTS) model? (A brief summary) - Cheonkam Jeong</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <article class="blog-post">
-        <h1>[Speech Technology] What is Glow Text-To-Speech (TTS) model? (A brief summary)</h1>
+        <h1>What is Glow Text-To-Speech (TTS) model? (A brief summary)</h1>
         <p class="post-date">December 22, 2022</p>
 
         <p><span style="color: #2b00fe; font-family: helvetica;">I will upload a full paper review with codes soon :)</span></p><p><span style="font-family: helvetica;">Text-to-Speech (TTS) is a task that speech is generated from text. TTS models, such as Tacotron 2 (Wang et al., 2017) and Deep Voice (Arik et al., 2017), are generative models that synthesize speech from text. It has been widely studied how to develop better models, especially with regard to expressiveness and speed. Tacotron 2 demonstrates excellent expressiveness – it produces a good quality of output; however, as it is an autoregressive model, the inference time increases linearly with the output. On the one hand, such models as FastSpeech (Ren et al., 2019) and ParaNet&nbsp;</span><span style="font-family: helvetica;">(Peng, Ping, Song, &amp; Zhao, 2020)</span><span style="background-color: white; color: #666666; font-family: helvetica; font-size: 13.2px;">&nbsp;</span><span style="font-family: helvetica;">generate mel-spectrograms from text in parallel, which alleviates the speed issue caused by autoregressive TTS models. However, both models are dependent upon pre-trained autoregressive TTS models to extract alignments. To address these issues, Glow-TTS model was proposed.</span></p><p><span style="font-family: helvetica;">Glow-TTS model is a flow-based parallel model. Unlike FastSpeech and ParaNet, it does not need external alignments. Rather, Glow-TTS can learn its own alignment by incorporating the properties of dynamic programming, which hidden Markov models (HMMs) and Connectionist Temporal Classification (CTC) utilizes. As with other deep learning-based models, it mainly consists of encoder and decoder. The encoder receives a text sequence and processes it using the encoder pre-net and Transformer encoder. Thereafter, the statistics of prior distribution and duration are predicted through the last projection layer and duration predictor of the encoder, respectively. The decoder receives a mel-spectrogram. It is processed through a bunch of flow blocks, each of which contains activation normalization layer, affine coupling layer, and invertible 1 * 1 convolution layer. The output is reshaped to make equal to the input size.&nbsp;</span></p><p><span style="font-family: helvetica;"><br /></span></p><div><br /></div>
 
         <p class="post-meta">
-            <strong>Categories:</strong> Speech Technology
+            Categories: Speech Technology
         </p>
 
         <p class="post-meta">
