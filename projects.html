@@ -116,49 +116,6 @@
         </div>
     </section>
 
-    <!-- Project 3: Temporal-Logic-FSM -->
-    <section class="project" id="fall-prevention">
-        <h2>Vision-Based Movement Transition Detection for Fall Prevention</h2>
-        <div class="project-meta">
-            <span class="project-role">Role: Lead Researcher</span>
-            <span class="project-funding">Submitted to Smart Health 2025</span>
-        </div>
-
-        <div class="project-content">
-            <h3>Overview</h3>
-            <p>
-                Developing a framework that uses temporal logic and finite state machines to detect
-                transition triggers in human movement sequences. The system identifies when an older adult
-                <em>intends</em> to transition between physical states (sitting-to-standing, walking-to-sitting)
-                before the movement occurs, enabling proactive fall prevention.
-            </p>
-
-            <h3>Technical Contributions</h3>
-            <ul>
-                <li><strong>Real-Time Pose Detection:</strong> Integrated MoveNet Lightning for 17-keypoint
-                    human skeleton extraction at real-time speeds on edge devices (NVIDIA Orin).</li>
-                <li><strong>Formal State Machine Encoding:</strong> Designed finite state machines capturing
-                    valid movement transition sequences with temporal logic rules.</li>
-                <li><strong>Predictive Intention Detection:</strong> Implemented algorithms detecting pre-movement
-                    states (intention to move) before actual movement onset.</li>
-                <li><strong>Hip-Centered Normalization:</strong> Developed pose normalization:
-                    <code>pose_size = max(2.5 × torso_size, max_i ||k_i - c_hip||)</code> for scale-invariant analysis.</li>
-            </ul>
-
-            <h3>Cognitive Science Integration</h3>
-            <ul>
-                <li>Models biomechanics of human movement transitions based on rehabilitation science literature</li>
-                <li>Detects cognitive/motor intention signals preceding physical movement</li>
-                <li>Addresses fall risk in elderly populations through predictive (not reactive) intervention</li>
-            </ul>
-
-            <div class="project-tech">
-                <strong>Technologies:</strong> Python, TensorFlow, MoveNet, OpenCV, Finite State Machines,
-                Temporal Logic, NVIDIA Orin (Edge Deployment)
-            </div>
-        </div>
-    </section>
-
     <!-- Additional Projects -->
     <section>
         <h2>Additional Projects</h2>
