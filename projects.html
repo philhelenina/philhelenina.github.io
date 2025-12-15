@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ML/AI Research Projects by Cheonkam Jeong - Emotional AI, Multimodal Emotion Recognition, and Computer Vision for Healthcare">
+    <title>Projects - Cheonkam Jeong</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Research Projects</h1>
+
+    <p class="intro">
+        My research integrates <strong>computational linguistics</strong> and <strong>machine learning</strong> to build
+        human-centered AI systems. These projects demonstrate the intersection of domain expertise in linguistics,
+        cognitive science, and speech processing with modern ML/AI techniques.
+    </p>
+
+    <!-- Project 1: ALZ-NOYCE -->
+    <section class="project" id="dementia-ai">
+        <h2>Emotion-Aware Conversational AI for Dementia Care</h2>
+        <div class="project-meta">
+            <span class="project-role">Role: AI/ML Lead</span>
+            <span class="project-funding">Funding: UCOP Noyce Initiative ($300,000)</span>
+        </div>
+
+        <div class="project-content">
+            <h3>Overview</h3>
+            <p>
+                Leading the development of a clinically-validated AI pipeline for managing dementia-related agitation
+                through therapeutic conversational interactions. This project creates the first AI system that combines
+                real-time emotion recognition with expert-designed therapeutic response generation for the 55+ million
+                people worldwide living with dementia.
+            </p>
+
+            <h3>Technical Contributions</h3>
+            <ul>
+                <li><strong>Real-time Speech Emotion Recognition:</strong> Developed a wav2vec2-based emotion classifier
+                    achieving ~80% accuracy on detecting agitation, frustration, and engagement states from raw audio.</li>
+                <li><strong>Therapeutic Response Generation:</strong> Engineered LLM prompting strategies (GPT-3.5/4)
+                    with clinician-validated therapeutic redirection techniques, including memory-based engagement and
+                    de-escalation protocols.</li>
+                <li><strong>Voice Synthesis for Elderly Care:</strong> Implemented prosodic modifications using
+                    Azure Cognitive Services to generate age-appropriate, calming voice outputs with controlled pitch
+                    and speech rate.</li>
+                <li><strong>Semantic Similarity Evaluation:</strong> Built conversation quality metrics using
+                    SentenceTransformers for comparing generated responses against clinical gold standards.</li>
+            </ul>
+
+            <h3>Linguistics & Cognitive Science Integration</h3>
+            <ul>
+                <li>Designed expert personas (Rachel, Jolene, Ralph) modeling different dementia severity levels
+                    based on clinical discourse patterns</li>
+                <li>Implemented episodic memory triggers leveraging autobiographical memory research</li>
+                <li>Applied therapeutic communication frameworks from dementia care literature</li>
+            </ul>
+
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, PyTorch, Transformers, OpenAI Whisper, wav2vec2,
+                Azure Cognitive Services, Streamlit, HuggingFace, SentenceTransformers
+            </div>
+
+            <div class="project-links">
+                <a href="https://nursing.uci.edu/2025/04/02/innovative-robot-research-aims-to-support-dementia-patients-and-caregivers/">Press Coverage</a>
+                <a href="https://www.researchprotocols.org/2024/1/e55761">Published Protocol (JMIR)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 2: SenticCrystal -->
+    <section class="project" id="senticcrystal">
+        <h2>SenticCrystal: Information-Theoretic Emotion Recognition</h2>
+        <div class="project-meta">
+            <span class="project-role">Role: Principal Investigator</span>
+            <span class="project-funding">NVIDIA Academic Grant Recipient</span>
+        </div>
+
+        <div class="project-content">
+            <h3>Overview</h3>
+            <p>
+                Developing an interpretable framework for multimodal emotion recognition that prioritizes
+                simplicity and transparency over black-box complexity. The core philosophy is "crystallizing"
+                essential emotional principles from data using information-theoretic diagnostics.
+            </p>
+
+            <h3>Technical Contributions</h3>
+            <ul>
+                <li><strong>Competitive Text-Only Performance:</strong> Achieved 73.25% accuracy on IEMOCAP
+                    4-way emotion classification using interpretable features, competitive with transformer-based
+                    approaches.</li>
+                <li><strong>Class Imbalance Solution:</strong> Recovered from catastrophic model failure
+                    (30.9% → 69.94%) through Focal Loss optimization (α=1.0, γ=1.2), eliminating 10-80% class bias.</li>
+                <li><strong>Hybrid Feature Architecture:</strong> Combined WordNet-Affect semantic embeddings with
+                    contextual RoBERTa representations for emotionally-grounded text understanding.</li>
+                <li><strong>Information-Theoretic Diagnostics:</strong> Implemented Shannon entropy and mutual
+                    information analysis for model interpretability and feature selection.</li>
+            </ul>
+
+            <h3>Linguistics & Cognitive Science Integration</h3>
+            <ul>
+                <li>Leveraged psycholinguistic resources (WordNet-Affect) encoding semantic relationships of emotion terms</li>
+                <li>Analyzed context dependency in emotional expression across conversational turns</li>
+                <li>Focused on interpretability: understanding <em>why</em> models make emotion predictions</li>
+            </ul>
+
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, PyTorch, CUDA, Transformers, RoBERTa, LSTM,
+                Scikit-learn, HuggingFace Accelerate, Information Theory libraries
+            </div>
+
+            <div class="project-links">
+                <a href="https://sail.usc.edu/iemocap/">IEMOCAP Dataset (USC SAIL)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3: Temporal-Logic-FSM -->
+    <section class="project" id="fall-prevention">
+        <h2>Vision-Based Movement Transition Detection for Fall Prevention</h2>
+        <div class="project-meta">
+            <span class="project-role">Role: Co-Investigator</span>
+            <span class="project-funding">Submitted to Smart Health 2025</span>
+        </div>
+
+        <div class="project-content">
+            <h3>Overview</h3>
+            <p>
+                Developing a framework that uses temporal logic and finite state machines to detect
+                transition triggers in human movement sequences. The system identifies when an older adult
+                <em>intends</em> to transition between physical states (sitting-to-standing, walking-to-sitting)
+                before the movement occurs, enabling proactive fall prevention.
+            </p>
+
+            <h3>Technical Contributions</h3>
+            <ul>
+                <li><strong>Real-Time Pose Detection:</strong> Integrated MoveNet Lightning for 17-keypoint
+                    human skeleton extraction at real-time speeds on edge devices (NVIDIA Orin).</li>
+                <li><strong>Formal State Machine Encoding:</strong> Designed finite state machines capturing
+                    valid movement transition sequences with temporal logic rules.</li>
+                <li><strong>Predictive Intention Detection:</strong> Implemented algorithms detecting pre-movement
+                    states (intention to move) before actual movement onset.</li>
+                <li><strong>Hip-Centered Normalization:</strong> Developed pose normalization:
+                    <code>pose_size = max(2.5 × torso_size, max_i ||k_i - c_hip||)</code> for scale-invariant analysis.</li>
+            </ul>
+
+            <h3>Cognitive Science Integration</h3>
+            <ul>
+                <li>Models biomechanics of human movement transitions based on rehabilitation science literature</li>
+                <li>Detects cognitive/motor intention signals preceding physical movement</li>
+                <li>Addresses fall risk in elderly populations through predictive (not reactive) intervention</li>
+            </ul>
+
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, TensorFlow, MoveNet, OpenCV, Finite State Machines,
+                Temporal Logic, NVIDIA Orin (Edge Deployment)
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Projects -->
+    <section>
+        <h2>Additional Projects</h2>
+
+        <div class="mini-project">
+            <h3>LLM Alignment for Empathetic Responses</h3>
+            <p>
+                Investigating Direct Preference Optimization (DPO) for training language models to generate
+                empathetic responses in healthcare contexts. Developing annotation frameworks for preference
+                data collection.
+            </p>
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, Transformers, DPO, Preference Learning
+            </div>
+        </div>
+
+        <div class="mini-project">
+            <h3>Multimodal Team Communication Analysis</h3>
+            <p>
+                Contributed to MultiCAT, a comprehensive annotation framework for multimodal team communication,
+                published at NAACL 2025. Developed annotation schemas for verbal and non-verbal communication
+                patterns in collaborative settings.
+            </p>
+            <div class="project-tech">
+                <strong>Technologies:</strong> Multimodal annotation, Inter-rater reliability analysis
+            </div>
+            <div class="project-links">
+                <a href="https://aclanthology.org/2025.findings-naacl.61/">NAACL 2025 Paper</a>
+            </div>
+        </div>
+
+        <div class="mini-project">
+            <h3>Big Data Phonetics: Korean Stop Hyperarticulation</h3>
+            <p>
+                Applied automated acoustic analysis to 100,000+ tokens from Korean broadcast speech,
+                demonstrating how speakers hyperarticulate phonetic cues in lexically confusable contexts.
+                This work bridges corpus linguistics with speech technology.
+            </p>
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, Praat scripting, Forced alignment, Statistical modeling
+            </div>
+            <div class="project-links">
+                <a href="https://labphon.org/sites/default/files/labphon19/Papers/corpusphon/jeong%20and%20wedel.pdf">LabPhon 2024 Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Summary -->
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <p>Python, R, C++, Bash</p>
+            </div>
+            <div class="skill-category">
+                <h4>ML/AI Frameworks</h4>
+                <p>PyTorch, TensorFlow, HuggingFace Transformers, Scikit-learn</p>
+            </div>
+            <div class="skill-category">
+                <h4>NLP & Speech</h4>
+                <p>LLMs (GPT-4, Claude), Whisper, wav2vec2, BERT/RoBERTa, Praat</p>
+            </div>
+            <div class="skill-category">
+                <h4>Computer Vision</h4>
+                <p>MoveNet, OpenCV, Pose Estimation</p>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud & Hardware</h4>
+                <p>NVIDIA GPUs (Academic Grant), Saturn Cloud, Azure Cognitive Services</p>
+            </div>
+            <div class="skill-category">
+                <h4>Research Methods</h4>
+                <p>Experimental design, Statistical analysis, IRR, Clinical validation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cheonkam Jeong. Last updated: December 2025.</p>
+    </footer>
+</body>
+</html>
