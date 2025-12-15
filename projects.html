@@ -70,43 +70,43 @@
 
     <!-- Project 2: SenticCrystal -->
     <section class="project" id="senticcrystal">
-        <h2>SenticCrystal: Information-Theoretic Emotion Recognition</h2>
+        <h2>Understanding Emotion in Discourse: From Recognition to Generation-Informed Insights</h2>
         <div class="project-meta">
             <span class="project-role">Role: Principal Investigator</span>
-            <span class="project-funding">NVIDIA Academic Grant Recipient</span>
+            <span class="project-funding">TMLR Manuscript in Preparation</span>
         </div>
 
         <div class="project-content">
             <h3>Overview</h3>
             <p>
-                Developing an interpretable framework for multimodal emotion recognition that prioritizes
-                simplicity and transparency over black-box complexity. The core philosophy is "crystallizing"
-                essential emotional principles from data using information-theoretic diagnostics.
+                Systematic analysis of emotion recognition in conversation (ERC), moving beyond "black box" accuracy
+                to understand <em>how</em> models work. Achieved state-of-the-art text-only performance on IEMOCAP
+                using strictly causal context, surpassing prior methods that exploit future utterances.
             </p>
 
             <h3>Technical Contributions</h3>
             <ul>
-                <li><strong>Competitive Text-Only Performance:</strong> Achieved 73.25% accuracy on IEMOCAP
-                    4-way emotion classification using interpretable features, competitive with transformer-based
-                    approaches.</li>
-                <li><strong>Class Imbalance Solution:</strong> Recovered from catastrophic model failure
-                    (30.9% → 69.94%) through Focal Loss optimization (α=1.0, γ=1.2), eliminating 10-80% class bias.</li>
-                <li><strong>Hybrid Feature Architecture:</strong> Combined WordNet-Affect semantic embeddings with
-                    contextual RoBERTa representations for emotionally-grounded text understanding.</li>
-                <li><strong>Information-Theoretic Diagnostics:</strong> Implemented Shannon entropy and mutual
-                    information analysis for model interpretability and feature selection.</li>
+                <li><strong>State-of-the-Art Performance:</strong> Achieved 82.69% accuracy on IEMOCAP
+                    4-way and 67.07% on 6-way emotion classification, surpassing prior text-only methods.</li>
+                <li><strong>Context Dominance:</strong> Demonstrated that dialogue history alone yields 22% F1
+                    improvement (p &lt; .0001), establishing conversational context as the primary driver of ERC.</li>
+                <li><strong>Structure-Context Trade-off:</strong> Hierarchical sentence representations improve
+                    utterance-level classification (+1.9%, p &lt; .01), but this benefit vanishes with sufficient
+                    context—dialogue history subsumes intra-utterance structure.</li>
+                <li><strong>Lexicon Redundancy:</strong> External affective knowledge (SenticNet) provides no gain
+                    over pre-trained embeddings, indicating modern encoders already capture affective semantics.</li>
             </ul>
 
             <h3>Linguistics & Cognitive Science Integration</h3>
             <ul>
-                <li>Leveraged psycholinguistic resources (WordNet-Affect) encoding semantic relationships of emotion terms</li>
-                <li>Analyzed context dependency in emotional expression across conversational turns</li>
-                <li>Focused on interpretability: understanding <em>why</em> models make emotion predictions</li>
+                <li>Corpus analysis of 14,059 discourse marker occurrences revealing emotion-specific positioning patterns</li>
+                <li>Discovered hedging patterns at utterance-initial positions in <em>sad</em> speech</li>
+                <li>Preliminary insights for emotion-conditioned text generation</li>
             </ul>
 
             <div class="project-tech">
                 <strong>Technologies:</strong> Python, PyTorch, CUDA, Transformers, RoBERTa, LSTM,
-                Scikit-learn, HuggingFace Accelerate, Information Theory libraries
+                Scikit-learn, HuggingFace Accelerate, SenticNet
             </div>
 
             <div class="project-links">
