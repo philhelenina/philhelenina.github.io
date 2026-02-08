@@ -29,27 +29,27 @@
             <p>
                 Leading the development of a clinically-validated AI pipeline for managing dementia-related agitation
                 through therapeutic conversational interactions. This project creates the first AI system that combines
-                real-time emotion recognition with expert-designed therapeutic response generation for the 55+ million
+                real-time emotion recognition with expert-designed empathetic therapeutic response generation for the 55+ million
                 people worldwide living with dementia.
             </p>
 
             <h3>Technical Contributions</h3>
             <ul>
-                <li><strong>Real-time Speech Emotion Recognition:</strong> Developed a wav2vec2-based emotion classifier
+                <li><strong>Real-time Speech Emotion Recognition:</strong> Developed a customized emotion classifier
                     achieving ~80% accuracy on detecting agitation, frustration, and engagement states from raw audio.</li>
                 <li><strong>Therapeutic Response Generation:</strong> Engineered LLM prompting strategies (GPT-3.5/4)
                     with clinician-validated therapeutic redirection techniques, including memory-based engagement and
                     de-escalation protocols.</li>
                 <li><strong>Voice Synthesis for Elderly Care:</strong> Implemented prosodic modifications using
                     Azure Cognitive Services to generate age-appropriate, calming voice outputs with controlled pitch
-                    and speech rate.</li>
+                    and speech rate, also considering entrainment.</li>
                 <li><strong>Semantic Similarity Evaluation:</strong> Built conversation quality metrics using
-                    SentenceTransformers for comparing generated responses against clinical gold standards.</li>
+                    Transformers for comparing generated responses against clinical gold standards.</li>
             </ul>
 
             <h3>Linguistics & Cognitive Science Integration</h3>
             <ul>
-                <li>Designed expert personas (Rachel, Jolene, Ralph) modeling different dementia severity levels
+                <li>Expert-designed medical personas (Rachel, Jolene, Ralph) modeling different dementia severity levels
                     based on clinical discourse patterns</li>
                 <li>Implemented episodic memory triggers leveraging autobiographical memory research</li>
                 <li>Applied therapeutic communication frameworks from dementia care literature</li>
@@ -70,10 +70,10 @@
 
     <!-- Project 2: SenticCrystal -->
     <section class="project" id="senticcrystal">
-        <h2>Understanding Emotion in Discourse: From Recognition to Generation-Informed Insights</h2>
+        <h2>Discourse Position and Context Length Matter: Information-Theoretic Analysis of Text-Based Emotion in IEMOCAP</h2>
         <div class="project-meta">
-            <span class="project-role">Role: Principal Investigator</span>
-            <span class="project-funding">TMLR Manuscript in Preparation</span>
+            <span class="project-role">Role: First & Corresponding Author</span>
+            <span class="project-funding">arXiv Preprint 2026</span>
         </div>
 
         <div class="project-content">
@@ -110,8 +110,58 @@
             </div>
 
             <div class="project-links">
+                <a href="https://arxiv.org/abs/2601.00181">arXiv</a>
                 <a href="https://github.com/philhelenina/SenticCrystal/releases/tag/v1.0-text">GitHub</a>
                 <a href="https://sail.usc.edu/iemocap/">IEMOCAP Dataset (USC SAIL)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3: LLM Alignment DPO -->
+    <section class="project" id="llm-alignment">
+        <h2>LLM Alignment for Linguistic Empathy Using Direct Preference Optimization</h2>
+        <div class="project-meta">
+            <span class="project-role">Role: First & Corresponding Author</span>
+            <span class="project-funding">Submitted to ACL 2026</span>
+        </div>
+
+        <div class="project-content">
+            <h3>Overview</h3>
+            <p>
+                A data-efficient approach to LLM alignment using linguistically-motivated symbolic rules
+                instead of expensive human preference data. This work introduces <strong>RLSF (Reinforcement Learning
+                from Symbolic Feedback)</strong>, achieving 100% alignment accuracy within 300 training steps—30-170x
+                faster than traditional RLHF methods.
+            </p>
+
+            <h3>Technical Contributions</h3>
+            <ul>
+                <li><strong>100% Alignment Accuracy:</strong> Achieved perfect alignment on expert-validated
+                    test sets within 300 training steps using Direct Preference Optimization.</li>
+                <li><strong>30-170x Faster Convergence:</strong> Dramatically reduced training time compared
+                    to RLHF baselines through symbolic rule-based preference generation.</li>
+                <li><strong>14,545 Preference Pairs:</strong> Generated large-scale preference dataset using
+                    5 linguistically-grounded symbolic rules across legal and mental health domains.</li>
+                <li><strong>Human Evaluation (ongoing):</strong> MTurk study showing 68.8% preference for
+                    DPO outputs over SFT baseline (p &lt; 0.001, Cohen's h = 0.40). Expanding to counseling domain.</li>
+                <li><strong>Ablation Studies:</strong> Demonstrated words rule adds +9.8pp through quality
+                    improvement (107%), not length bias (-7%), with length-controlled regression analysis.</li>
+            </ul>
+
+            <h3>Linguistics & Cognitive Science Integration</h3>
+            <ul>
+                <li>Designed 5 symbolic rules based on linguistic empathy research: voice, tense, pronoun, imperative mood, and evaluative words</li>
+                <li>Applied counseling psychology principles for empathetic communication patterns</li>
+                <li>Leveraged affective lexicons and discourse markers for preference pair generation</li>
+            </ul>
+
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, PyTorch, Transformers, DPO, Claude API,
+                HuggingFace, Scikit-learn, Amazon MTurk
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/philhelenina/LLM-alignment-DPO/releases/tag/v0.9-wip">GitHub (WIP)</a>
             </div>
         </div>
     </section>
@@ -121,36 +171,25 @@
         <h2>Additional Projects</h2>
 
         <div class="mini-project">
-            <h3>LLM Alignment for Empathetic Responses</h3>
-            <p>
-                Investigating Direct Preference Optimization (DPO) for training language models to generate
-                empathetic responses in healthcare contexts. Developing annotation frameworks for preference
-                data collection.
-            </p>
-            <div class="project-tech">
-                <strong>Technologies:</strong> Python, Transformers, DPO, Preference Learning
-            </div>
-        </div>
-
-        <div class="mini-project">
             <h3>Multimodal Team Communication Analysis</h3>
             <p>
                 Contributed to MultiCAT, a comprehensive annotation framework for multimodal team communication,
                 published at NAACL 2025. Developed annotation schemas for verbal and non-verbal communication
-                patterns in collaborative settings.
+                patterns in collaborative settings, incorporating Theory of Mind and multi-party conversation analysis.
             </p>
             <div class="project-tech">
-                <strong>Technologies:</strong> Multimodal annotation, Inter-rater reliability analysis
+                <strong>Technologies:</strong> Multimodal annotation, Theory of Mind, Multi-party conversation, Inter-rater reliability analysis
             </div>
             <div class="project-links">
                 <a href="https://aclanthology.org/2025.findings-naacl.61/">NAACL 2025 Paper</a>
+                <a href="https://github.com/adarshp/MultiCAT">GitHub</a>
             </div>
         </div>
 
         <div class="mini-project">
             <h3>Big Data Phonetics: Korean Stop Hyperarticulation</h3>
             <p>
-                Applied automated acoustic analysis to 100,000+ tokens from Korean broadcast speech,
+                <strong>First Author</strong> | Applied automated acoustic analysis to 100,000+ tokens from Korean broadcast speech,
                 demonstrating how speakers hyperarticulate phonetic cues in lexically confusable contexts.
                 This work bridges corpus linguistics with speech technology.
             </p>
@@ -159,6 +198,18 @@
             </div>
             <div class="project-links">
                 <a href="https://labphon.org/sites/default/files/labphon19/Papers/corpusphon/jeong%20and%20wedel.pdf">LabPhon 2024 Paper</a>
+            </div>
+        </div>
+
+        <div class="mini-project">
+            <h3>ML-Based Support Ticket Classification (FindingFive)</h3>
+            <p>
+                <strong>HLT Internship</strong> | Built text classification system for customer support automation.
+                Manually labeled 273 tickets, extracted 2,935 TF-IDF features, and compared 5 classifiers.
+                Linear SVC achieved 70.4% accuracy; CNN with Word2Vec embeddings achieved 69%.
+            </p>
+            <div class="project-tech">
+                <strong>Technologies:</strong> Python, Scikit-learn, Keras, CNN, Word2Vec, TF-IDF, Zoho API
             </div>
         </div>
     </section>
@@ -177,15 +228,11 @@
             </div>
             <div class="skill-category">
                 <h4>NLP & Speech</h4>
-                <p>LLMs (GPT-4, Claude), Whisper, wav2vec2, BERT/RoBERTa, Praat</p>
-            </div>
-            <div class="skill-category">
-                <h4>Computer Vision</h4>
-                <p>MoveNet, OpenCV, Pose Estimation</p>
+                <p>LLMs (GPT-4, Claude), Whisper, wav2vec2, BERT/RoBERTa, Praat, Azure Speech</p>
             </div>
             <div class="skill-category">
                 <h4>Cloud & Hardware</h4>
-                <p>NVIDIA GPUs (Academic Grant), Saturn Cloud, Azure Cognitive Services</p>
+                <p>NVIDIA GPUs (Academic Grant), Saturn Cloud, AWS</p>
             </div>
             <div class="skill-category">
                 <h4>Research Methods</h4>
@@ -206,7 +253,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Cheonkam Jeong. Last updated: December 2025.</p>
+        <p>&copy; 2026 Cheonkam Jeong. Last updated: February 2026.</p>
     </footer>
 </body>
 </html>
